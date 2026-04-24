@@ -16,6 +16,6 @@ export interface ContactInfo {
   email: string;
   phone: string;
   location: string;
-  instagram: string;
-  twitter: string;
+  redBook: string;
+  tiktok: string;
 }
