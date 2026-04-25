@@ -50,14 +50,14 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     id: '4',
     title: '电视塔',
     category: 'Portrait',
-    imageUrl: "/compress_image/movietv/002.jpg",
+    imageUrl: "./compress_image/movietv/002.jpg",
     images: [
-      '/compress_image/movietv/001.jpg',
-      '/compress_image/movietv/003.jpg',
-      '/compress_image/movietv/002.jpg',
-      '/compress_image/movietv/004.jpg',
-      '/compress_image/movietv/005.jpg',
-      '/compress_image/movietv/006.jpg'
+      './compress_image/movietv/001.jpg',
+      './compress_image/movietv/003.jpg',
+      './compress_image/movietv/002.jpg',
+      './compress_image/movietv/004.jpg',
+      './compress_image/movietv/005.jpg',
+      './compress_image/movietv/006.jpg'
     ],
     description: 'Long exposure photography capturing the ethereal flow of lights.',
     year: '2025'
@@ -66,14 +66,14 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     id: '5',
     title: 'white_shirt',
     category: 'Portrait',
-    imageUrl: "/compress_image/white_shirt/white1.jpg",
+    imageUrl: "./compress_image/white_shirt/white1.jpg",
     images: [
-      '/compress_image/white_shirt/white1.jpg',
-      '/compress_image/white_shirt/white2.jpg',
-      '/compress_image/white_shirt/white3.jpg',
-      '/compress_image/white_shirt/white4.jpg',
-      '/compress_image/white_shirt/white5.jpg',
-      '/compress_image/white_shirt/white6.jpg'
+      './compress_image/white_shirt/white1.jpg',
+      './compress_image/white_shirt/white2.jpg',
+      './compress_image/white_shirt/white3.jpg',
+      './compress_image/white_shirt/white4.jpg',
+      './compress_image/white_shirt/white5.jpg',
+      './compress_image/white_shirt/white6.jpg'
     ],
     description: 'Long exposure photography capturing the ethereal flow of lights.',
     year: '2025'
