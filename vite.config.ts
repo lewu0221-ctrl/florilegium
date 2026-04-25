@@ -10,7 +10,7 @@ export default defineConfig(({mode}) => {
 
 
     plugins: [react(), tailwindcss()],
-    base: '/',
+    base: '/florilegium/',
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
