@@ -3,11 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export interface PhotographyWork {
+export interface PhotographyGroup {
   id: string;
   title: string;
   category: string;
   imageUrl: string;
+  images: string[];
   description: string;
   year: string;
 }
