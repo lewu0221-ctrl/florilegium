@@ -155,7 +155,7 @@ export default function App() {
                   id: g.id,
                   title: g.title,
                   category: g.category,
-                  imageUrl: g.coverImageUrl || g.images[0] || ''
+                  imageUrl: g.imageUrl || g.images[0] || ''
                 }))}
                 onSelect={(id) => handleGroupSelect(PHOTOGRAPHY_GROUPS.find(g => g.id === id)!)}
               />
