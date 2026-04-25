@@ -24,12 +24,15 @@ export default function App() {
     const handleHashChange = () => {
       setCurrentHash(window.location.hash || '#/works');
       setSelectedImage(null); // Close lightbox on navigation
+      window.scrollTo(0, 0); // Always scroll to top on navigation
     };
     window.addEventListener('hashchange', handleHashChange);
 
     // Initial check
     if (!window.location.hash) {
       window.location.hash = '#/works';
+    } else {
+      window.scrollTo(0, 0);
     }
 
     return () => window.removeEventListener('hashchange', handleHashChange);
@@ -42,6 +45,13 @@ export default function App() {
   const selectedGroup = PHOTOGRAPHY_GROUPS.find(g => g.id === selectedGroupId) || null;
   const currentView = isContact ? 'CONTACT' : (isDetail && selectedGroup ? 'GROUP_DETAIL' : 'WORKS');
 
+  // New logic: Auto-open lightbox if detail view has only one image
+  useEffect(() => {
+    if (currentView === 'GROUP_DETAIL' && selectedGroup && selectedGroup.images.length === 1) {
+      setSelectedImage(selectedGroup.images[0]);
+    }
+  }, [currentView, selectedGroup]);
+
   const filteredGroups = activeCategory === 'All'
     ? PHOTOGRAPHY_GROUPS
     : PHOTOGRAPHY_GROUPS.filter(g => g.category === activeCategory);
@@ -51,13 +61,14 @@ export default function App() {
   };
 
   const handleGroupSelect = (group: PhotographyGroup) => {
-    if (group.images.length === 1) {
-      // User said: "If only main image, no sub-list, click main image directly enter detail page"
-      // If "detail page" means the image detail (lightbox), we do this:
-      setSelectedGroup(group);
-      setSelectedImage(group.images[0]);
-    } else {
-      navigate(`#/works/${group.id}`);
+    navigate(`#/works/${group.id}`);
+  };
+
+  const handleCloseLightbox = () => {
+    setSelectedImage(null);
+    // If we were in a single-image group detail, going back should take us to the main works list
+    if (selectedGroup && selectedGroup.images.length === 1) {
+      navigate('#/works');
     }
   };
 
@@ -144,7 +155,7 @@ export default function App() {
                   id: g.id,
                   title: g.title,
                   category: g.category,
-                  imageUrl: g.imageUrl || g.images[0] || null
+                  imageUrl: g.coverImageUrl || g.images[0] || ''
                 }))}
                 onSelect={(id) => handleGroupSelect(PHOTOGRAPHY_GROUPS.find(g => g.id === id)!)}
               />
@@ -214,7 +225,7 @@ export default function App() {
           description: selectedGroup?.description || '',
           year: selectedGroup?.year || ''
         } : null}
-        onClose={() => setSelectedImage(null)}
+        onClose={handleCloseLightbox}
       />
 
       <footer className="py-12 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4">
