@@ -28,9 +28,16 @@ export default function App() {
     : PHOTOGRAPHY_GROUPS.filter(g => g.category === activeCategory);
 
   const handleGroupSelect = (group: PhotographyGroup) => {
-    setSelectedGroup(group);
-    setCurrentView('GROUP_DETAIL');
-    window.scrollTo(0, 0);
+    if (group.images.length === 1) {
+      // If there's only one image, open it directly in lightbox
+      setSelectedGroup(group);
+      setSelectedImage(group.images[0]);
+    } else {
+      // Otherwise go to the detail view
+      setSelectedGroup(group);
+      setCurrentView('GROUP_DETAIL');
+      window.scrollTo(0, 0);
+    }
   };
 
   const handleBackToGroups = () => {
@@ -128,7 +135,7 @@ export default function App() {
                   id: g.id,
                   title: g.title,
                   category: g.category,
-                  imageUrl: g.coverImageUrl || g.images[0] || '' // Fallback to first image if cover is missing
+                  imageUrl: g.imageUrl || g.images[0] || null // Fallback to first image if cover is missing
                 }))}
                 onSelect={(id) => handleGroupSelect(PHOTOGRAPHY_GROUPS.find(g => g.id === id)!)}
               />

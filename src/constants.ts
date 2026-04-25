@@ -64,7 +64,7 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
   },
   {
     id: '5',
-    title: 'white_shirt',
+    title: '白衬衫',
     category: 'Portrait',
     imageUrl: "./compress_image/white_shirt/white1.jpg",
     images: [
@@ -74,6 +74,47 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
       './compress_image/white_shirt/white4.jpg',
       './compress_image/white_shirt/white5.jpg',
       './compress_image/white_shirt/white6.jpg'
+    ],
+    description: 'Long exposure photography capturing the ethereal flow of lights.',
+    year: '2025'
+  },
+  {
+    id: '6',
+    title: '在北海',
+    category: 'Portrait',
+    imageUrl: "./compress_image/coat/coat1.jpg",
+    images: ['./compress_image/coat/coat1.jpg'],
+    description: 'Long exposure photography capturing the ethereal flow of lights.',
+    year: '2025'
+  },
+  {
+    id: '7',
+    title: '是好朋友！',
+    category: 'Portrait',
+    imageUrl: "./compress_image/ancient_costume/ancient1.jpg",
+    images: [
+    './compress_image/ancient_costume/ancient1.jpg',
+    './compress_image/ancient_costume/ancient2.jpg',
+    './compress_image/ancient_costume/ancient3.jpg',
+    './compress_image/ancient_costume/ancient4.jpg',
+    './compress_image/ancient_costume/ancient5.jpg',
+    './compress_image/ancient_costume/ancient6.jpg'
+    ],
+    description: 'Long exposure photography capturing the ethereal flow of lights.',
+    year: '2025'
+  },
+  {
+    id: '8',
+    title: '旗袍',
+    category: 'Portrait',
+    imageUrl: "./compress_image/qipao/qipao1.jpg",
+    images: [
+    './compress_image/qipao/qipao1.jpg',
+    './compress_image/qipao/qipao2.jpg',
+    './compress_image/qipao/qipao3.jpg',
+    './compress_image/qipao/qipao4.jpg',
+    './compress_image/qipao/qipao5.jpg',
+    './compress_image/qipao/qipao6.jpg'
     ],
     description: 'Long exposure photography capturing the ethereal flow of lights.',
     year: '2025'

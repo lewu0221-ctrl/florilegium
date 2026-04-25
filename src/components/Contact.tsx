@@ -50,13 +50,9 @@ export default function Contact({ info }: ContactProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-2">
             <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400">Socials</p>
-            <div className="flex space-x-6">
-              <a href="#" className="hover:text-black transition-colors">
-                <Instagram className="w-5 h-5 stroke-[1.5px]" />
-              </a>
-              <a href="#" className="hover:text-black transition-colors">
-                <Twitter className="w-5 h-5 stroke-[1.5px]" />
-              </a>
+            <div className="flex flex-col space-y-1">
+              <a href="#" className="font-sans text-lg hover:text-black transition-colors">小红书🍠：{info.redBook}</a>
+              <a href="#" className="font-sans text-lg hover:text-black transition-colors">抖音🎵：{info.tiktok}</a>
             </div>
           </div>
           <div className="space-y-2">
