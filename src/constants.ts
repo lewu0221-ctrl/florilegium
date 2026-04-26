@@ -3,13 +3,40 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { PhotographyGroup, ContactInfo } from './types';
+import { PhotographyGroup, ContactInfo,CategoryMenu } from './types';
+
+const DATA_SCHEMA = {
+  PORTRAIT: {
+     name: 'Portrait',
+     subs: {
+      INDOOR: { name: '室内', tags:{tagsname1:"纪实",tagsname2:"情绪氛围",tagsname3:"时尚/审美"}},
+      OUTDOOR: { name: '室外', tags: { outdoor1: '自然环境',
+                                      outdoor2: '城市街头', outdoor3: '建筑/场景', outdoor4: '旅拍' ,
+                                      outdoor5: '情绪氛围'} },
+      WEDDING: { name: '婚礼', tags: { wending1: '胶片', wending2: '数码' } }
+
+    }
+  }
+}as const;
+
+// Short-hand reference
+const c = DATA_SCHEMA;
+
+export const NAV_MENU: CategoryMenu[] = Object.values(DATA_SCHEMA).map(cat => ({
+  name: cat.name,
+  subCategories: Object.values(cat.subs).map(sub => ({
+    name: sub.name,
+    tags: Object.values(sub.tags)
+  }))
+}));
 
 export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
   {
     id: '1',
     title: '生日写真part1',
     category: 'Portrait',
+    subCategory: c.PORTRAIT.subs.INDOOR.name,
+    tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor1,c.PORTRAIT.subs.INDOOR.tags.tagsname2],
     imageUrl: "https://cdn.phototourl.com/free/2026-04-24-fc42a203-b153-4b4e-a2e4-db0e8263991b.jpg",
     images: [
       'https://cdn.phototourl.com/free/2026-04-24-fc42a203-b153-4b4e-a2e4-db0e8263991b.jpg',
@@ -25,6 +52,8 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     id: '2',
     title: '生日写真part2',
     category: 'Portrait',
+    subCategory: c.PORTRAIT.subs.INDOOR.name,
+    tags: [c.PORTRAIT.subs.INDOOR.tags.tagsname1,c.PORTRAIT.subs.INDOOR.tags.tagsname2],
     imageUrl: "https://cdn.phototourl.com/free/2026-04-24-474c8f1e-e080-4879-aee5-91ccc849062c.jpg",
     images: [
       'https://cdn.phototourl.com/free/2026-04-24-474c8f1e-e080-4879-aee5-91ccc849062c.jpg',
@@ -37,6 +66,8 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     id: '3',
     title: '秋天银杏',
     category: 'Portrait',
+    subCategory: c.PORTRAIT.subs.OUTDOOR.name,
+    tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor1],
     imageUrl: "https://cdn.phototourl.com/free/2026-04-24-2933d341-ebdb-4a4d-8684-995c57b17e13.jpg",
     images: [
       'https://cdn.phototourl.com/free/2026-04-24-2933d341-ebdb-4a4d-8684-995c57b17e13.jpg',
@@ -50,6 +81,8 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     id: '4',
     title: '电视塔',
     category: 'Portrait',
+    subCategory: c.PORTRAIT.subs.OUTDOOR.name,
+    tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor3],
     imageUrl: "./compress_image/movietv/002.jpg",
     images: [
       './compress_image/movietv/001.jpg',
@@ -66,6 +99,8 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     id: '5',
     title: '白衬衫',
     category: 'Portrait',
+    subCategory: c.PORTRAIT.subs.OUTDOOR.name,
+    tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor1],
     imageUrl: "./compress_image/white_shirt/white1.jpg",
     images: [
       './compress_image/white_shirt/white1.jpg',
@@ -82,6 +117,8 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     id: '6',
     title: '在北海',
     category: 'Portrait',
+    subCategory: c.PORTRAIT.subs.OUTDOOR.name,
+    tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor1],
     imageUrl: "./compress_image/coat/coat1.jpg",
     images: ['./compress_image/coat/coat1.jpg'],
     description: 'Long exposure photography capturing the ethereal flow of lights.',
@@ -91,6 +128,8 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     id: '7',
     title: '是好朋友！',
     category: 'Portrait',
+    subCategory: c.PORTRAIT.subs.OUTDOOR.name,
+    tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor3],
     imageUrl: "./compress_image/ancient_costume/ancient1.jpg",
     images: [
     './compress_image/ancient_costume/ancient1.jpg',
@@ -107,6 +146,8 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     id: '8',
     title: '旗袍',
     category: 'Portrait',
+    subCategory: c.PORTRAIT.subs.OUTDOOR.name,
+    tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor1],
     imageUrl: "./compress_image/qipao/qipao1.jpg",
     images: [
     './compress_image/qipao/qipao1.jpg',
@@ -115,6 +156,43 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     './compress_image/qipao/qipao4.jpg',
     './compress_image/qipao/qipao5.jpg',
     './compress_image/qipao/qipao6.jpg'
+    ],
+    description: 'Long exposure photography capturing the ethereal flow of lights.',
+    year: '2025'
+  },
+  {
+    id: '9',
+    title: '雨滴',
+    category: 'Portrait',
+    subCategory: c.PORTRAIT.subs.OUTDOOR.name,
+    tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor5],
+    imageUrl: "./compress_image/rain/rain8.jpg",
+    images: [
+    './compress_image/rain/rain8.jpg',
+    './compress_image/rain/rain2.jpg',
+    './compress_image/rain/rain3.jpg',
+    './compress_image/rain/rain4.jpg',
+    './compress_image/rain/rain5.jpg',
+    './compress_image/rain/rain6.jpg',
+    './compress_image/rain/rain7.jpg',
+    './compress_image/rain/rain1.jpg'
+    ],
+    description: 'Long exposure photography capturing the ethereal flow of lights.',
+    year: '2025'
+  },
+  {
+    id: '10',
+    title: '故宫-与六百年时光合影',
+    category: 'Portrait',
+    subCategory: c.PORTRAIT.subs.OUTDOOR.name,
+    tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor3],
+    imageUrl: "./compress_image/gugong/gugong1.JPG",
+    images: [
+    './compress_image/gugong/gugong1.JPG',
+    './compress_image/gugong/gugong2.JPG',
+    './compress_image/gugong/gugong3.JPG',
+    './compress_image/gugong/gugong4.JPG',
+    './compress_image/gugong/gugong5.JPG'
     ],
     description: 'Long exposure photography capturing the ethereal flow of lights.',
     year: '2025'
