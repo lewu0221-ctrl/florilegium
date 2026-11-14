@@ -37,13 +37,10 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     category: 'Portrait',
     subCategory: c.PORTRAIT.subs.INDOOR.name,
     tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor1,c.PORTRAIT.subs.INDOOR.tags.tagsname2],
-    imageUrl: "https://cdn.phototourl.com/free/2026-04-24-fc42a203-b153-4b4e-a2e4-db0e8263991b.jpg",
+     imageUrl: "./compress_image/birthday/inside_birthday1.jpg",
     images: [
-      'https://cdn.phototourl.com/free/2026-04-24-fc42a203-b153-4b4e-a2e4-db0e8263991b.jpg',
-      'https://cdn.phototourl.com/free/2026-04-24-a394ba30-2788-47d1-aa8d-8eb038c66d3e.jpg',
-      'https://cdn.phototourl.com/free/2026-04-24-026b56b1-8455-47cb-85ca-b0f74b601b03.jpg',
-      'https://cdn.phototourl.com/free/2026-04-24-09268930-e2e0-4328-b260-d18bb6e9dc02.jpg',
-      'https://cdn.phototourl.com/free/2026-04-24-57571065-3b74-4afc-9f9c-f38a9527c6f3.jpg'
+      './compress_image/birthday/inside_birthday1.jpg',
+     './compress_image/birthday/inside_birthday2.jpg'
     ],
     description: 'Exploring the interplay of light and concrete in modern structural design.',
     year: '2025'
@@ -54,10 +51,13 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     category: 'Portrait',
     subCategory: c.PORTRAIT.subs.INDOOR.name,
     tags: [c.PORTRAIT.subs.INDOOR.tags.tagsname1,c.PORTRAIT.subs.INDOOR.tags.tagsname2],
-    imageUrl: "https://cdn.phototourl.com/free/2026-04-24-474c8f1e-e080-4879-aee5-91ccc849062c.jpg",
+    imageUrl: "./compress_image/birthday/birthday2.jpg",
     images: [
-      'https://cdn.phototourl.com/free/2026-04-24-474c8f1e-e080-4879-aee5-91ccc849062c.jpg',
-      'https://cdn.phototourl.com/free/2026-04-24-d651a87a-b9c2-4dfa-8a42-c5b23a81158e.jpg'
+    './compress_image/birthday/birthday2.jpg',
+      './compress_image/birthday/birthday3.jpg',
+     './compress_image/birthday/birthday4.jpg',
+     './compress_image/birthday/birthday5.jpg',
+      './compress_image/birthday/birthday6.jpg'
     ],
     description: 'Long exposure photography capturing the ethereal flow of lights.',
     year: '2025'
@@ -68,11 +68,11 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     category: 'Portrait',
     subCategory: c.PORTRAIT.subs.OUTDOOR.name,
     tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor1],
-    imageUrl: "https://cdn.phototourl.com/free/2026-04-24-2933d341-ebdb-4a4d-8684-995c57b17e13.jpg",
+     imageUrl: "./compress_image/autumn/autumn2.jpg",
     images: [
-      'https://cdn.phototourl.com/free/2026-04-24-2933d341-ebdb-4a4d-8684-995c57b17e13.jpg',
-      'https://cdn.phototourl.com/free/2026-04-24-bb67dc8a-9600-4b6a-9046-7a7430f3eebe.jpg',
-      'https://cdn.phototourl.com/member/2026-04-24-39f1ca39-394e-44e0-ade1-7a132cfa78fd.jpg'
+      './compress_image/autumn/autumn1.jpg',
+     './compress_image/autumn/autumn2.jpg',
+ './compress_image/autumn/autumn3.jpg'
     ],
     description: 'Long exposure photography capturing the ethereal flow of lights.',
     year: '2025'
