@@ -40,7 +40,7 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
      imageUrl: "./compress_image/birthday/inside_birthday1.jpg",
     images: [
       './compress_image/birthday/inside_birthday1.jpg',
-     './compress_image/birthday/inside_birthday2.jpg'
+     './compress_image/birthday/inside_birthday2.JPG'
     ],
     description: 'Exploring the interplay of light and concrete in modern structural design.',
     year: '2025'
@@ -51,13 +51,13 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     category: 'Portrait',
     subCategory: c.PORTRAIT.subs.INDOOR.name,
     tags: [c.PORTRAIT.subs.INDOOR.tags.tagsname1,c.PORTRAIT.subs.INDOOR.tags.tagsname2],
-    imageUrl: "./compress_image/birthday/birthday2.jpg",
+    imageUrl: "./compress_image/birthday/birthday2.JPG",
     images: [
-    './compress_image/birthday/birthday2.jpg',
-      './compress_image/birthday/birthday3.jpg',
-     './compress_image/birthday/birthday4.jpg',
-     './compress_image/birthday/birthday5.jpg',
-      './compress_image/birthday/birthday6.jpg'
+    './compress_image/birthday/birthday2.JPG',
+      './compress_image/birthday/birthday3.JPG',
+     './compress_image/birthday/birthday4.JPG',
+     './compress_image/birthday/birthday5.JPG',
+      './compress_image/birthday/birthday6.JPG'
     ],
     description: 'Long exposure photography capturing the ethereal flow of lights.',
     year: '2025'
@@ -68,11 +68,11 @@ export const  PHOTOGRAPHY_GROUPS: PhotographyGroup[] = [
     category: 'Portrait',
     subCategory: c.PORTRAIT.subs.OUTDOOR.name,
     tags: [c.PORTRAIT.subs.OUTDOOR.tags.outdoor1],
-     imageUrl: "./compress_image/autumn/autumn2.jpg",
+     imageUrl: "./compress_image/autumn/autumn2.JPG",
     images: [
-      './compress_image/autumn/autumn1.jpg',
-     './compress_image/autumn/autumn2.jpg',
- './compress_image/autumn/autumn3.jpg'
+      './compress_image/autumn/autumn1.JPG',
+     './compress_image/autumn/autumn2.JPG',
+ './compress_image/autumn/autumn3.JPG'
     ],
     description: 'Long exposure photography capturing the ethereal flow of lights.',
     year: '2025'
